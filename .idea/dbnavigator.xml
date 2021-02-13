@@ -26,7 +26,7 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="423eab14-11b2-4c9f-942e-24904a66d04c">
-        <schema name="main" object-types="view, table" />
+        <schema name="main" object-types="constraint, dataset trigger, index, view, table, column" />
       </connection>
     </loaded-nodes>
   </component>
@@ -36,15 +36,18 @@
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="423eab14-11b2-4c9f-942e-24904a66d04c" object-ref="schemas/main/tables/dbtickdata" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="423eab14-11b2-4c9f-942e-24904a66d04c" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="423eab14-11b2-4c9f-942e-24904a66d04c" dataset="main.dbtickdata" active-filter-id="">
-      <filter id="857e6e02-1e71-4dc2-89fa-4057c0a29a2d" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
-        <condition column="id" operator="=" value="" active="true" />
+    <filter-actions connection-id="423eab14-11b2-4c9f-942e-24904a66d04c" dataset="main.dbtickdata" active-filter-id="EMPTY_FILTER">
+      <filter id="857e6e02-1e71-4dc2-89fa-4057c0a29a2d" name="eth-usdt &amp; HUOBI" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="symbol" operator="=" value="eth-usdt" active="true" />
+        <condition column="exchange" operator="=" value="HUOBI" active="true" />
       </filter>
     </filter-actions>
     <filter-actions connection-id="423eab14-11b2-4c9f-942e-24904a66d04c" dataset="main.dbbardata" active-filter-id="aff7c2cb-2f35-469e-91d3-c0d7c80e8fd2">

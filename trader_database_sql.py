@@ -210,7 +210,7 @@ def init_models(db: Database, driver: Driver):
             db_tick = DbTickData()
 
             db_tick.symbol = tick.symbol
-            db_tick.exchange = tick.exchange
+            db_tick.exchange = tick.exchange.value
             db_tick.datetime = dt
             db_tick.name = tick.name
             db_tick.volume = tick.volume
@@ -366,7 +366,7 @@ class SqlManager(BaseDatabaseManager):
             )
                 .order_by(self.class_tick.datetime)
         )
-
+        print(s)
         data = [db_tick.to_tick() for db_tick in s]
         return data
 
